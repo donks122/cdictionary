@@ -1,0 +1,624 @@
+<root>
+
+  <category class="basic" display="Basic">
+
+    <command name="alias"> 
+      <usage>
+        alias [name[=value] ... ]
+      </usage>
+
+      <description>
+        Without arguments, `alias' prints the list of aliases.
+        Otherwise, an alias is defined for each NAME whose VALUE is given.
+      </description>
+    </command>
+
+    <command name="apply"> 
+      <usage>
+        apply -# cmd arg...
+      </usage>
+
+      <options> 
+        <option name="-#">
+          Normally arguments are taken singly; 
+          the optional number -# specifies the number of arguments to be passed to command.  
+          If the number is zero, command is run, without arguments, once for each argument.
+        </option>
+      </options>
+
+      <description>
+        The apply utility runs the named command on each argument argument in turn.
+      </description>
+
+    </command>
+
+    <command name="basename"> 
+      <usage>
+        basename string [suffix]
+      </usage>
+
+      <description>
+        Returns filename portion of the argument, stripping suffing or trailing forward slashes.
+      </description>
+
+    </command>
+
+    <command name="banner"> 
+      <usage>
+        banner [ options ] text 
+      </usage>
+
+      <options> 
+        <option name="-w">
+          Optional argument suggests witdth to use when publishing a banner
+        </option>
+      </options>
+
+      <description>
+        Banner prints a large, high quality banner on the standard output.
+      </description>
+
+    </command>
+
+    <command name="bash"> </command>
+
+    <command name="cal"> 
+      <usage>
+        cal [ options ] [ month ] [ year ]
+      </usage>
+
+      <options> 
+
+        <option name="-m">
+          Show calendar for this month
+        </option>
+
+        <option name="-y">
+          Show entire calendar for this year
+        </option>
+      </options>
+
+      <description>
+        * Shows calendar for current month if no options specified.
+        * If month specified, show calendar for that month
+        * If year is given displays calendar for that entire year
+        * If both month and year is given show calendar for the combination of month and year on standard output
+      </description>
+
+    </command>
+
+
+    <command name="chgrp"> 
+      <usage>
+        chgrp [ options ] group file...
+      </usage>
+
+      <options>
+      </options>
+      <description>
+      </description>
+    </command>
+
+    <command name="chmod"> 
+      <usage>
+        chmod [ options ] mode file...
+      </usage>
+      <options>
+      </options>
+      <description>
+      </description>
+    </command>
+
+    <command name="chown"> 
+      <usage>
+        chown [ options ] owner file...
+      </usage>
+      <options>
+      </options>
+      <description>
+      </description>
+    </command>
+
+    <command name="chroot"> 
+      <usage>
+        chroot [ options ] newroot [ command ]
+      </usage>
+      <options>
+      </options>
+      <description>
+      </description>
+
+    </command>
+
+
+    <command name="clear"> 
+      <usage>
+        clear
+      </usage>
+      <description>
+        Clears the screen. You could also use ^l on bash terminals with readline. 
+      </description>
+    </command>
+
+    <command name="cp"> 
+      <usage>
+        cp [ options ] src... dst
+      </usage>
+      <options>
+      </options>
+      <description>
+      </description>
+    </command>
+
+    <command name="dirname"> 
+      <usage>
+      </usage>
+      <options>
+      </options>
+      <description>
+      </description>
+    </command>
+
+    <command name="echo"> 
+      <usage>
+        echo [ options ] text
+      </usage>
+      <options>
+      </options>
+      <description>
+      </description>
+    </command>
+
+    <command name="env"> 
+      <usage>
+        env [ options ] [ name=value...] [ utility [ args... ] ]
+      </usage>
+      <options>
+      </options>
+      <description>
+      </description>
+    </command>
+
+    <command name="exit"> 
+      <usage>
+        exit [ status ]
+      </usage>
+      <description>
+        Exits with given status. Else exits with status >0
+      </description>
+    </command>
+
+    <command name="file"> 
+      <usage>
+        file [ options ] file
+      </usage>
+      <options>
+      </options>
+      <description>
+      </description>
+    </command>
+
+    <command name="find"> 
+      <usage>
+        find [ options ] path expression
+      </usage>
+      <options>
+      </options>
+      <description>
+      </description>
+    </command>
+
+    <command name="hash"> 
+      <usage>
+      </usage>
+      <options>
+      </options>
+      <description>
+      </description>
+    </command>
+
+    <command name="ls"> 
+      <usage>
+        ls [ options ] file...
+      </usage>
+      <options>
+      </options>
+      <description>
+      </description>
+    </command>
+
+    <command name="ln"> 
+      <usage>
+      </usage>
+      <options>
+      </options>
+      <description>
+      </description>
+    </command>
+
+    <command name="locate"> 
+      <usage>
+        locate [ options ] pattern
+      </usage>
+      <options>
+      </options>
+      <description>
+      </description>
+    </command>
+
+    <command name="md5"> 
+      <usage>
+      </usage>
+      <options>
+      </options>
+      <description>
+      </description>
+    </command>
+
+    <command name="mkdir"> 
+      <usage>
+        mkdir [ options ] path...
+      </usage>
+      <options>
+      </options>
+      <description>
+      </description>
+    </command>
+
+    <command name="mv"> 
+      <usage>
+        mv [ options ] src.. dst
+      </usage>
+      <options>
+      </options>
+      <description>
+      </description>
+    </command>
+
+    <command name="passwd"> 
+      <usage>
+        passwd [ options ] [ user ]
+      </usage>
+      <options>
+      </options>
+      <description>
+      </description>
+    </command>
+
+    <command name="popd"> 
+      <usage>
+      </usage>
+      <options>
+      </options>
+      <description>
+      </description>
+    </command>
+
+    <command name="pwd"> 
+      <usage>
+        pwd [ options ]
+      </usage>
+      <options>
+      </options>
+      <description>
+      </description>
+    </command>
+
+    <command name="rmdir"> 
+      <usage>
+        rmdir path 
+      </usage>
+      <description>
+      </description>
+    </command>
+
+    <command name="rm"> 
+      <usage>
+        rm [ options ] file...
+      </usage>
+      <options>
+      </options>
+      <description>
+      </description>
+    </command>
+
+    <command name="sleep"> 
+      <usage>
+        sleep n
+      </usage>
+      <description>
+      </description>
+    </command>
+
+    <command name="su"> 
+      <usage>
+      </usage>
+      <options>
+      </options>
+      <description>
+      </description>
+    </command>
+
+    <command name="uname"> 
+      <usage>
+      </usage>
+      <options>
+      </options>
+      <description>
+      </description>
+    </command>
+
+    <command name="ulimit"> 
+      <usage>
+      </usage>
+      <options>
+      </options>
+      <description>
+      </description>
+    </command>
+
+    <command name="uptime"> 
+      <usage>
+        uptime
+      </usage>
+      <description>
+        Shows uptime of the system
+      </description>
+    </command>
+
+    <command name="unalias"> 
+      <usage>
+        unalias [ options ] name
+      </usage>
+      <options>
+      </options>
+      <description>
+      </description>
+    </command>
+
+    <command name="unset"> 
+      <usage>
+      </usage>
+      <options>
+      </options>
+      <description>
+      </description>
+    </command>
+
+    <command name="wall"> 
+      <usage>
+      </usage>
+      <options>
+      </options>
+      <description>
+      </description>
+    </command>
+
+    <command name="what"> 
+      <usage>
+      </usage>
+      <options>
+      </options>
+      <description>
+      </description>
+    </command>
+
+    <command name="whatis"> 
+      <usage>
+      </usage>
+      <options>
+      </options>
+      <description>
+      </description>
+    </command>
+
+    <command name="which"> 
+      <usage>
+      </usage>
+      <options>
+      </options>
+      <description>
+      </description>
+    </command>
+
+    <command name="whichis"> 
+      <usage>
+      </usage>
+      <options>
+      </options>
+      <description>
+      </description>
+    </command>
+
+    <command name="whereis"> 
+      <usage>
+      </usage>
+      <options>
+      </options>
+      <description>
+      </description>
+    </command>
+
+    <command name="who"> 
+      <usage>
+      </usage>
+      <options>
+      </options>
+      <description>
+      </description>
+    </command>
+
+    <command name="whoami">
+      <usage>
+      </usage>
+      <options>
+      </options>
+      <description>
+      </description>
+    </command>
+
+    <command name="touch"> 
+      <usage>
+      </usage>
+      <options>
+      </options>
+      <description>
+      </description>
+    </command>
+
+    <command name="xargs"> 
+      <usage>
+      </usage>
+      <options>
+      </options>
+      <description>
+      </description>
+    </command>
+
+    <command name="tee"> 
+      <usage>
+      </usage>
+      <options>
+      </options>
+      <description>
+      </description>
+    </command>
+  </category>
+
+  <category name="text" display="Text Processing"> 
+    <command name="less"> </command>
+    <command name="awk"> </command>
+    <command name="comm"> </command>
+    <command name="bzcat"> </command>
+    <command name="cut"> </command>
+    <command name="diff"> </command>
+    <command name="diff3"> </command>
+    <command name="ex"> </command>
+    <command name="gzcat"> </command>
+    <command name="grep"> </command>
+    <command name="fgrep"> </command>
+    <command name="head"> </command>
+    <command name="tail"> </command>
+    <command name="more"> </command>
+    <command name="less"> </command>
+    <command name="iconv"> </command>
+    <command name="join"> </command>
+    <command name="uniq"> </command>
+    <command name="sort"> </command>
+    <command name="sed"> </command>
+    <command name="tr"> </command>
+    <command name="wc"> </command>
+  </category>
+
+  <category name="job" display="Job Control"> 
+    <command name="bg"> </command>
+    <command name="fg"> </command>
+    <command name="disown"> </command>
+    <command name="kill"> </command>
+    <command name="pkill"> </command>
+    <command name="pgrep"> </command>
+    <command name="top"> </command>
+    <command name="ps"> </command>
+    <command name="nice"> </command>
+    <command name="renice"> </command>
+    <command name="at"> </command>
+    <command name="nohup"> </command>
+    <command name="crontab"> </command>
+    <command name="batch"> </command>
+  </category>
+
+  <category name="util" display="Utils"> 
+    <command name="screen"> </command>
+    <command name="dtach"> </command>
+    <command name="tar"> </command>
+    <command name="gzip"> </command>
+    <command name="gunzip"> </command>
+    <command name="bzip2"> </command>
+    <command name="bunzip2"> </command>
+    <command name="zip"> </command>
+    <command name="unzip"> </command>
+    <command name="ssh"> </command>
+    <command name="telnet"> </command>
+    <command name="ftp"> </command>
+    <command name="wget"> </command>
+    <command name="curl"> </command>
+    <command name="scp"> </command>
+    <command name="openssl"> </command>
+    <command name="sftp"> </command>
+    <command name="ssh-keygen"> </command>
+    <command name="ab"> </command>
+    <command name="convert"> </command>
+    <command name="dos2unix"> </command>
+  </category>
+
+  <category name="fun" display="Fun"> 
+    <command name="cowsay"> </command>
+    <command name="fortune"> </command>
+  </category>
+
+  <category name="sys" display="System Administration"> 
+    <command name="df"> </command>
+    <command name="du"> </command>
+    <command name="adduser"> </command>
+    <command name="addgrp"> </command>
+    <command name="sudo"> </command>
+    <command name="dig"> </command>
+    <command name="finger"> </command>
+    <command name="whois"> </command>
+    <command name="ifconfig"> </command>
+    <command name="iwconfig"> </command>
+    <command name="route"> </command>
+    <command name="tcpdump"> </command>
+    <command name="netstat"> </command>
+    <command name="lsof"> </command>
+    <command name="lshw"> </command>
+    <command name="fdisk"> </command>
+    <command name="mkfs"> </command>
+    <command name="fsck"> </command>
+    <command name="mount"> </command>
+    <command name="umount"> </command>
+    <command name="iptables"> </command>
+  </category>
+
+  <category name="tools" display="Tools"> 
+
+    <category name="apache" display="Apache">
+      <command name="apachectl"> </command>
+      <command name="httpd"> </command>
+      <command name="ab"> </command>
+    </category>
+
+    <category name="mysql" display="MySQL">
+      <command name="mysql"> </command>
+      <command name="mysqld"> </command>
+      <command name="mysqldump"> </command>
+      <command name="mysqlimport"> </command>
+    </category>
+
+    <category name="postgres" display="PostgreSQL">
+      <command name="psql"> </command>
+    </category>
+
+    <category name="nginx" display="nginx">
+    </category>
+
+    <category name="perl" display="Perl">
+      <command name="perl"> </command>
+      <command name="cpan"> </command>
+      <command name="cpanm"> </command>
+      <command name="perldoc"> </command>
+      <command name="mojo"> </command>
+      <command name="catalyst.pl"> </command>
+    </category>
+
+    <category name="python" display="Python">
+      <command name="python"> </command>
+    </category>
+
+    <category name="ruby" display="Ruby">
+      <command name="ruby"> </command>
+      <command name="irb"> </command>
+      <command name="erb"> </command>
+    </category>
+  </category>
+</root>
