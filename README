@@ -1,0 +1,10 @@
+
+I am a developer and a heavy user of terminal. I really wanted a consise list of 
+all commands and tools i use in one convinient place so i can look up. I don't usually
+need an exhaustive list of options etc. I need the important switches i use often.
+
+This project is a step towards making that list available. Its not exhaustive. But should
+be sufficient for intermediate level developers like me who use terminal a lot. 
+
+I plan to add build systems and publish this list as iOS, Android and Web. For now, 
+its just work in progress.
