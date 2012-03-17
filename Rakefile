@@ -2,9 +2,9 @@
 require 'rubygems'
 require 'rake'
 
-namespace 'commands' do
+namespace 'build' do
 
-  task :build do
+  task :html do
     puts "build stuff now"
   end
 
