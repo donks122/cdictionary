@@ -1,0 +1,191 @@
+<root>
+  <category class="basic" display="Basic">
+    <command name="alias"> </command>
+    <command name="apply"> </command>
+    <command name="basename"> </command>
+    <command name="banner"> </command>
+    <command name="bash"> </command>
+    <command name="cal"> </command>
+    <command name="chgrp"> </command>
+    <command name="chmod"> </command>
+    <command name="chown"> </command>
+    <command name="chroot"> </command>
+    <command name="clear"> </command>
+    <command name="cp"> </command>
+    <command name="dirname"> </command>
+    <command name="echo"> </command>
+    <command name="env"> </command>
+    <command name="exit"> </command>
+    <command name="file"> </command>
+    <command name="find"> </command>
+    <command name="hash"> </command>
+    <command name="ls"> </command>
+    <command name="less"> </command>
+    <command name="ln"> </command>
+    <command name="locate"> </command>
+    <command name="md5"> </command>
+    <command name="mkdir"> </command>
+    <command name="mv"> </command>
+    <command name="passwd"> </command>
+    <command name="popd"> </command>
+    <command name="pwd"> </command>
+    <command name="rmdir"> </command>
+    <command name="rm"> </command>
+    <command name="sleep"> </command>
+    <command name="su"> </command>
+    <command name="uname"> </command>
+    <command name="ulimit"> </command>
+    <command name="uname"> </command>
+    <command name="unlink"> </command>
+    <command name="uptime"> </command>
+    <command name="unalias"> </command>
+    <command name="unset"> </command>
+    <command name="wall"> </command>
+    <command name="what"> </command>
+    <command name="whatis"> </command>
+    <command name="which"> </command>
+    <command name="whichis"> </command>
+    <command name="whereis"> </command>
+    <command name="who"> </command>
+    <command name="whoami"> </command>
+    <command name="touch"> </command>
+    <command name="xargs"> </command>
+    <command name="tee"> </command>
+  </category>
+
+  <category name="text" display="Text Processing"> 
+    <command name="awk"> </command>
+    <command name="comm"> </command>
+    <command name="bzcat"> </command>
+    <command name="cut"> </command>
+    <command name="diff"> </command>
+    <command name="diff3"> </command>
+    <command name="ex"> </command>
+    <command name="gzcat"> </command>
+    <command name="grep"> </command>
+    <command name="fgrep"> </command>
+    <command name="head"> </command>
+    <command name="tail"> </command>
+    <command name="more"> </command>
+    <command name="less"> </command>
+    <command name="iconv"> </command>
+    <command name="join"> </command>
+    <command name="uniq"> </command>
+    <command name="sort"> </command>
+    <command name="sed"> </command>
+    <command name="tr"> </command>
+    <command name="wc"> </command>
+  </category>
+
+  <category name="job" display="Job Control"> 
+    <command name="bg"> </command>
+    <command name="fg"> </command>
+    <command name="disown"> </command>
+    <command name="kill"> </command>
+    <command name="pkill"> </command>
+    <command name="pgrep"> </command>
+    <command name="top"> </command>
+    <command name="ps"> </command>
+    <command name="nice"> </command>
+    <command name="renice"> </command>
+    <command name="at"> </command>
+    <command name="nohup"> </command>
+    <command name="crontab"> </command>
+    <command name="batch"> </command>
+  </category>
+
+  <category name="util" display="Utils"> 
+    <command name="screen"> </command>
+    <command name="dtach"> </command>
+    <command name="tar"> </command>
+    <command name="gzip"> </command>
+    <command name="gunzip"> </command>
+    <command name="bzip2"> </command>
+    <command name="bunzip2"> </command>
+    <command name="zip"> </command>
+    <command name="unzip"> </command>
+    <command name="ssh"> </command>
+    <command name="telnet"> </command>
+    <command name="ftp"> </command>
+    <command name="wget"> </command>
+    <command name="curl"> </command>
+    <command name="scp"> </command>
+    <command name="openssl"> </command>
+    <command name="sftp"> </command>
+    <command name="ssh-keygen"> </command>
+    <command name="ab"> </command>
+    <command name="convert"> </command>
+    <command name="dos2unix"> </command>
+  </category>
+
+  <category name="fun" display="Fun"> 
+    <command name="cowsay"> </command>
+    <command name="fortune"> </command>
+  </category>
+
+  <category name="sys" display="System Administration"> 
+    <command name="df"> </command>
+    <command name="du"> </command>
+    <command name="adduser"> </command>
+    <command name="addgrp"> </command>
+    <command name="sudo"> </command>
+    <command name="dig"> </command>
+    <command name="finger"> </command>
+    <command name="whois"> </command>
+    <command name="ifconfig"> </command>
+    <command name="iwconfig"> </command>
+    <command name="route"> </command>
+    <command name="tcpdump"> </command>
+    <command name="netstat"> </command>
+    <command name="lsof"> </command>
+    <command name="lshw"> </command>
+    <command name="fdisk"> </command>
+    <command name="mkfs"> </command>
+    <command name="fsck"> </command>
+    <command name="mount"> </command>
+    <command name="umount"> </command>
+    <command name="iptables"> </command>
+  </category>
+
+  <category name="tools" display="Tools"> 
+
+    <category name="apache" display="Apache">
+      <command name="apachectl"> </command>
+      <command name="httpd"> </command>
+      <command name="ab"> </command>
+    </category>
+
+    <category name="mysql" display="MySQL">
+      <command name="mysql"> </command>
+      <command name="mysqld"> </command>
+      <command name="mysqldump"> </command>
+      <command name="mysqlimport"> </command>
+    </category>
+
+    <category name="postgres" display="PostgreSQL">
+      <command name="psql"> </command>
+    </category>
+
+    <category name="nginx" display="nginx">
+    </category>
+
+    <category name="perl" display="Perl">
+      <command name="perl"> </command>
+      <command name="cpan"> </command>
+      <command name="cpanm"> </command>
+      <command name="perldoc"> </command>
+      <command name="mojo"> </command>
+      <command name="catalyst.pl"> </command>
+    </category>
+
+    <category name="python" display="Python">
+      <command name="python"> </command>
+    </category>
+
+    <category name="ruby" display="Ruby">
+      <command name="ruby"> </command>
+      <command name="irb"> </command>
+      <command name="erb"> </command>
+    </category>
+  </category>
+</root>
