@@ -1,6 +1,9 @@
 
 require 'rubygems'
 require 'rake'
+require 'nokogiri'
+
+task :default => 'build:html'
 
 namespace 'build' do
 
