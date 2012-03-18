@@ -487,28 +487,387 @@
   </category>
 
   <category name="text" display="Text Processing"> 
-    <command name="less"> </command>
-    <command name="awk"> </command>
-    <command name="comm"> </command>
-    <command name="bzcat"> </command>
-    <command name="cut"> </command>
-    <command name="diff"> </command>
+    <command name="less"> 
+      <usage>
+        less [ options ] file
+      </usage>
+      <options>
+        <option name="-?"> 
+          Help
+        </option>
+        <option name="-h"> 
+          Help
+        </option>
+        <option name="-v"> 
+          Version
+        </option>
+        <option name="--version"> 
+          Version
+        </option>
+      </options>
+      <description>
+        * Less  is  a program similar to more (1), but which allows backward movement in the file as well as forward movement.
+        * Also, less does not have to read the entire input file before starting
+        * ^D - Scroll Down
+        * ^U - Scroll Up
+        * q  - Quit
+        * SPACE - Scroll screenful
+        * ^B - Scroll Backwards
+        * ^L - Redraw the screen
+        * /pattern - Match
+        * ?pattern - Match Previous
+        * n - Next match
+        * N - Previous match
+      </description>
+    </command>
+
+    <command name="awk"> 
+      <usage>
+        awk [ options ] file...
+      </usage>
+      <options>
+        <option name="-F"> 
+          Field Separator sets, $FS
+        </option>
+
+        <option name="-v var=value"> 
+          Set a variable
+        </option>
+
+        <option name="-f file"> 
+          Set the program file
+        </option>
+      </options>
+      <description>
+
+       Awk scans each input file for lines that match any of a set of patterns specified literally in prog or in one or more files specified
+       as -f progfile.  With each pattern there can be an associated action that will be performed when a line of a file  matches  the  pat-
+       tern.   Each  line  is  matched against the pattern portion of every pattern-action statement; the associated action is performed for
+       each matched pattern.  The file name - means the standard input.  Any file of the form var=value is treated as an assignment,  not  a
+       filename,  and  is  executed  at the time it would have been opened if it were a filename.  The option -v followed by var=value is an
+       assignment to be done before prog is executed; any number of -v options may be present.  The -F fs option  defines  the  input  field
+       separator to be the regular expression fs.
+
+      </description>
+    </command>
+
+
+    <command name="comm"> 
+      <usage>
+        comm [ options ] file1 file2
+      </usage>
+      <options>
+        <option name="-1"> 
+          Supress column 1
+        </option>
+
+        <option name="-2"> 
+          Supress column 2
+        </option>
+
+        <option name="-3"> 
+          Supress column 3
+        </option>
+
+        <option name="-i"> 
+          Case insensitive comparision
+        </option>
+
+      </options>
+      <description>
+        The comm utility reads file1 and file2, which should be sorted lexically, and produces three text columns as output: lines only in
+        file1; lines only in file2; and lines in both files.
+      </description>
+
+    </command>
+
+    <command name="bzcat"> 
+      <usage>
+        bzcat [ options ] file...
+      </usage>
+      <options>
+        <option name="-s"> 
+          Reduce memory usage
+        </option>
+      </options>
+      <description>
+        Uncompress files to STDOUT
+      </description>
+    </command>
+
+    <command name="cut"> 
+      <usage>
+        cut [ options ] file
+      </usage>
+      <options>
+        <option name="-d"> 
+          Delimiter text
+        </option>
+        <option name="-f"> 
+          Field list
+        </option>
+      </options>
+      <description>
+        The cut utility cuts out selected portions of each line (as specified by list) from each file and writes them to the standard output.
+      </description>
+    </command>
+
+    <command name="diff"> 
+      <usage>
+        diff [options] files
+      </usage>
+      <options>
+        <option name="-i | --ignorecase"> 
+          Ignore case
+        </option>
+        <option name="-E"> 
+          Ignore tab expansion
+        </option>
+        <option name="-w"> 
+          Ignore all whitespace
+        </option>
+        <option name="-a"> 
+          Treat all files as text
+        </option>
+        <option name="-q"> 
+          Ouput only if the file is different, brief output
+        </option>
+        <option name="--normal"> 
+          Normal diff output
+        </option>
+        <option name="--n"> 
+          RCS style output
+        </option>
+        <option name="-y"> 
+          Output in two columns
+        </option>
+        <option name="-r"> 
+          Recursive
+        </option>
+        <option name="-d | --minimal"> 
+          Try hard to find minimum changes
+        </option>
+        <option name="--version"> 
+          Output version
+        </option>
+        <option name="--help"> 
+          Help
+        </option>
+      </options>
+      <description>
+        Compare files line by line
+      </description>
+    </command>
+
     <command name="diff3"> </command>
     <command name="ex"> </command>
     <command name="gzcat"> </command>
-    <command name="grep"> </command>
-    <command name="fgrep"> </command>
-    <command name="head"> </command>
-    <command name="tail"> </command>
+
+    <command name="grep"> 
+      <usage>
+        grep [ options ] file...
+      </usage>
+      <options>
+        <option name="-c"> 
+          Show count
+        </option>
+        <option name="-E"> 
+          Use extended regexp
+        </option>
+        <option name="-i"> 
+          Ignore case
+        </option>
+        <option name="-n"> 
+          Show line numbers
+        </option>
+        <option name="-P"> 
+          Use perl regular expressions
+        </option>
+        <option name="-q"> 
+          Quiet
+        </option>
+        <option name="-R"> 
+          Recursive
+        </option>
+        <option name="-v"> 
+          Invert match
+        </option>
+        <option name="-v"> 
+          Invert match
+        </option>
+      </options>
+      <description>
+        Grep  searches  the  named  input FILEs (or standard input if no files are named, or the file name - is given) for lines containing a
+        match to the given PATTERN.  By default, grep prints the matching lines.
+
+        * egrep is same as grep -E
+        * fgres is same as grep -F
+
+      </description>
+    </command>
+
+    <command name="head"> 
+      <usage>
+        head [options] file...
+      </usage>
+      <options>
+        <option name="-n"> 
+          Number of lines to show
+        </option>
+      </options>
+      <description>
+        This filter displays the first count lines or bytes of each of the specified files, or of the standard input if no files are specified.
+        If count is omitted it defaults to 10.
+      </description>
+
+    </command>
+
+    <command name="tail"> 
+      <usage>
+        tail [ options ] file
+      </usage>
+      <options>
+        <option name="-n"> 
+          Number of lines to show
+        </option>
+        <option name="-f"> 
+          Waits for additional data to be added to the end of the file
+        </option>
+        <option name="-r"> 
+          Revers the order of the output
+        </option>
+      </options>
+      <description>
+        The tail utility displays the contents of file or, by default, its standard input, to the standard output.
+      </description>
+    </command>
+
     <command name="more"> </command>
-    <command name="less"> </command>
-    <command name="iconv"> </command>
-    <command name="join"> </command>
-    <command name="uniq"> </command>
-    <command name="sort"> </command>
-    <command name="sed"> </command>
-    <command name="tr"> </command>
-    <command name="wc"> </command>
+
+    <command name="iconv"> 
+      <usage>
+        iconv [ options ]
+      </usage>
+      <options>
+        <option name="-f"> 
+          From encoding
+        </option>
+        <option name="-t"> 
+          To encoding
+        </option>
+        <option name="-l"> 
+          List all encoding
+        </option>
+        <option name="-c"> 
+          Silently ignore all characters that can not be converted
+        </option>
+      </options>
+      <description>
+       The  iconv  program converts text from one encoding to another encoding.  More precisely, it converts from the encoding given for the
+       -f option to the encoding given for the -t option. Either of these encodings defaults to the encoding of the current locale. All  the
+       inputfiles  are  read  and  converted in turn; if no inputfile is given, the standard input is used. The converted text is printed to
+       standard output.
+      </description>
+    </command>
+
+
+    <command name="join"> 
+      <usage>
+      </usage>
+      <options>
+      </options>
+      <description>
+      </description>
+    </command>
+
+    <command name="uniq"> 
+      <usage>
+        uniq [ options ] input_file [ output_file ]
+      </usage>
+      <options>
+        <option name="-c"> 
+          Preceed each line with count of number of times it appeared
+        </option>
+        <option name="-d"> 
+          Only output repeated lines
+        </option>
+        <option name="-f"> 
+          Ignore first n fields
+        </option>
+        <option name="-i"> 
+          Case insensitinve comparision
+        </option>
+        <option name="-u"> 
+          Output only lines that are not repeated
+        </option>
+      </options>
+      <description>
+        The uniq utility reads the specified input_file comparing adjacent lines, and writes a copy of each unique input line to the
+     output_file.  If input_file is a single dash (`-') or absent, the standard input is read.  If output_file is absent, standard output is
+     used for output.  The second and succeeding copies of identical adjacent input lines are not written.  Repeated lines in the input will
+     not be detected if they are not adjacent, so it may be necessary to sort the files first. 
+      </description>
+    </command>
+
+    <command name="sort"> 
+      <usage>
+      </usage>
+      <options>
+      </options>
+      <description>
+      </description>
+    </command>
+
+    <command name="sed"> 
+      <usage>
+      </usage>
+      <options>
+      </options>
+      <description>
+      </description>
+    </command>
+
+    <command name="tr"> 
+      <usage>
+        tr [options] s1 s2
+      </usage>
+      <options>
+        <option name="-d"> 
+          Delete any occurance of string
+        </option>
+        <option name="-c"> 
+          Complement selection
+        </option>
+        <option name="-s"> 
+          Squeeze multiple occurances of string
+        </option>
+      </options>
+      <description>
+        The tr utility copies the standard input to the standard output with substitution or deletion of selected characters.
+      </description>
+    </command>
+
+    <command name="wc"> 
+      <usage>
+        wc [options] file...
+      </usage>
+        <option name="-w"> 
+          Number of words
+        </option>
+        <option name="-l"> 
+          Number of lines
+        </option>
+        <option name="-c"> 
+          Number of characters
+        </option>
+      <options>
+      </options>
+      <description>
+        The wc utility displays the number of lines, words, and bytes contained in each input file, or standard input (if no file is specified)
+        to the standard output.
+      </description>
+    </command>
+
   </category>
 
   <category name="job" display="Job Control"> 

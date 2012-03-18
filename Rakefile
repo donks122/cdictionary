@@ -9,6 +9,7 @@ task :default => 'build:html'
 class LCHelper
 
   CONTENT_FILE = 'commands.xml'
+  SHOW_INCOMPLETE_COMMANDS = true
 
   class Node
 
@@ -83,6 +84,13 @@ class LCHelper
       false
     end
 
+    def incomplete_command elem
+
+      return '' unless SHOW_INCOMPLETE_COMMANDS
+
+      "<li> #{elem['name']} </li>"
+    end
+
 
     def content_for node_list
       if node_list.size > 0 
@@ -92,7 +100,7 @@ class LCHelper
           markup << '<ul>'
           i.item.css( 'command' ).each do |j|
 
-            ( markup << "<li> #{j['name']} </li>" ) && next if _incomplete? j
+            ( markup << incomplete_command( j ) ) and next if _incomplete? j
 
             markup << '<li>' 
             markup << usage_markup( j )
