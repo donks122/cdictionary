@@ -41,7 +41,7 @@ class LCHelper
 
           next if i.item[ 'name'].nil?
 
-          markup << "<li> <a href='#{i.item[ 'name' ]}'>" << i.item[ 'display' ] << "</a>"
+          markup << "<li> <a href='\##{i.item[ 'name' ]}'>" << i.item[ 'display' ] << "</a>"
           markup << category_nav_for( i.children ) if i.children.size > 0
           markup << '</li>'
         end
@@ -87,6 +87,10 @@ class LCHelper
       _r( 'top.html' )
     end
 
+    def get_footer 
+      _r( 'foot.html' )
+    end
+
   end
 end
 
@@ -96,6 +100,11 @@ namespace 'build' do
 
   task :html do
     LCHelper.parse
+    File.open( 'build.html', 'w' ) do |f|
+      f.write LCHelper.get_header
+      f.write LCHelper.category_markup
+      f.write LCHelper.get_footer
+    end
   end
 
 end
