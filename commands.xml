@@ -210,6 +210,7 @@
 
     <command name="hash"> 
       <usage>
+        hash [options]
       </usage>
       <options>
       </options>
@@ -332,6 +333,7 @@
 
     <command name="su"> 
       <usage>
+        su [ options ] [ login [ args ] ]
       </usage>
       <options>
       </options>
@@ -350,6 +352,7 @@
 
     <command name="ulimit"> 
       <usage>
+        ulimit [ options ] [ limit ]
       </usage>
       <options>
       </options>
@@ -378,6 +381,7 @@
 
     <command name="unset"> 
       <usage>
+        unset [ options ] name
       </usage>
       <options>
       </options>
@@ -387,6 +391,7 @@
 
     <command name="wall"> 
       <usage>
+        man [ options ] file
       </usage>
       <options>
       </options>
@@ -403,17 +408,10 @@
       </description>
     </command>
 
-    <command name="whatis"> 
-      <usage>
-      </usage>
-      <options>
-      </options>
-      <description>
-      </description>
-    </command>
 
     <command name="which"> 
       <usage>
+        which [ options ] program...
       </usage>
       <options>
       </options>
@@ -432,6 +430,7 @@
 
     <command name="whereis"> 
       <usage>
+        whereis programs...
       </usage>
       <options>
       </options>
@@ -450,6 +449,7 @@
 
     <command name="whoami">
       <usage>
+        whoami
       </usage>
       <options>
       </options>
@@ -459,6 +459,7 @@
 
     <command name="touch"> 
       <usage>
+        touch [ options ] file...
       </usage>
       <options>
       </options>

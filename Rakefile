@@ -77,7 +77,7 @@ class LCHelper
       '<code>' << item.content << '</code>'
     end
 
-    def _invalid? elem
+    def _incomplete? elem
       return true if usage_markup( elem ).empty?
 
       false
@@ -92,7 +92,7 @@ class LCHelper
           markup << '<ul>'
           i.item.css( 'command' ).each do |j|
 
-            next if _invalid? j
+            ( markup << "<li> #{j['name']} </li>" ) && next if _incomplete? j
 
             markup << '<li>' 
             markup << usage_markup( j )
