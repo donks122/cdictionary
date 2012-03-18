@@ -49,8 +49,78 @@ class LCHelper
       end
     end
 
+    def options_markup el
+
+      return '' unless el.css( 'options > option' ).size > 0
+
+      markup = '<section>'        <<
+        '<span> Options </span>'  <<
+        '<ul>'
+
+
+      el.css( 'options > option' ).each do |j|
+        markup << '<li>' << '<code>' << j[ 'name' ] << '</code>' << '<p>' << j.content << '</p>'
+      end
+
+      markup << '</ul> </section>'
+      
+      markup
+    end
+
+    def description_markup elem
+      '<section>' << elem.css( 'description' ).first.content << '</section>'
+    end
+
+    def usage_markup elem
+      return '' if ( item = elem.css( 'usage' ).first ).nil?
+
+      '<code>' << item.content << '</code>'
+    end
+
+    def _invalid? elem
+      return true if usage_markup( elem ).empty?
+
+      false
+    end
+
+
+    def content_for node_list
+      if node_list.size > 0 
+        markup = '<section>' 
+        node_list.each do |i|
+
+          markup << '<ul>'
+          i.item.css( 'command' ).each do |j|
+
+            next if _invalid? j
+
+            markup << '<li>' 
+            markup << usage_markup( j )
+            markup << options_markup( j )
+            markup << description_markup( j )
+            markup << '</li>'
+
+          end
+          markup << '</ul>'
+        end
+        markup << '</section>'
+      end
+    end
+
     def category_markup
-      category_nav_for @node.children
+      '<header>'                                << 
+        '<section>'                             <<
+          '<nav>'                               <<
+            category_nav_for( @node.children )  <<
+          '</nav>'                              <<
+        '</section>'                            <<
+      '</header>'
+    end
+
+    def content_markup
+      '<section>'                               <<
+        content_for( @node.children )           <<
+      '</section>'
     end
 
     def parse_rest node_list
@@ -76,7 +146,6 @@ class LCHelper
 
     def _r fname, dir = 'html'
       f = File.join( 'assets', ( dir || 'html' ), fname ) 
-
       File.open( f ).read  if File.exists? f
     end
 
@@ -103,6 +172,7 @@ namespace 'build' do
     File.open( 'build.html', 'w' ) do |f|
       f.write LCHelper.get_header
       f.write LCHelper.category_markup
+      f.write LCHelper.content_markup
       f.write LCHelper.get_footer
     end
   end
