@@ -871,11 +871,97 @@
   </category>
 
   <category name="job" display="Job Control"> 
-    <command name="bg"> </command>
-    <command name="fg"> </command>
-    <command name="disown"> </command>
-    <command name="kill"> </command>
-    <command name="pkill"> </command>
+    <command name="bg"> 
+      <usage>
+        bg [ jobspec ]
+      </usage>
+      <options>
+      </options>
+      <description>
+        Place the jobs identified by each JOB_SPEC in the background, as if they
+        had been started with `&amp;'.  If JOB_SPEC is not present, the shell's notion
+        of the current job is used.
+      </description>
+    </command>
+
+    <command name="fg"> 
+      <usage>
+        fg [ jobspec ]
+      </usage>
+      <options>
+      </options>
+      <description>
+        Place the job identified by JOB_SPEC in the foreground, making it the
+        current job.  If JOB_SPEC is not present, the shell's notion of the
+        current job is used.
+      </description>
+    </command>
+
+    <command name="disown"> 
+      <usage>
+        disown [ options ] [ jobspec ]
+      </usage>
+      <options>
+        <option name="-a"> 
+          Remove all jobs if JOBSPEC not specified
+        </option>
+        <option name="-h"> 
+          Mark jobspec so SIGHUP is not sent
+        </option>
+        <option name="-r"> 
+          Remove only running jobs
+        </option>
+      </options>
+      <description>
+      Remove jobs from current shell.
+      </description>
+    </command>
+
+    <command name="kill"> 
+      <usage>
+        kill [options] pid...
+      </usage>
+      <options>
+        <option name="-s"> 
+          Signal name
+        </option>
+        <option name="-l"> 
+          Exit status
+        </option>
+        <option name="-signal_name"> 
+          Symbolic name of the signal
+        </option>
+        <option name="-#"> 
+          Signal number to send
+        </option>
+      </options>
+      <description>
+        The kill utility sends a signal to the processes specified by the pid operand(s)
+        
+        ==SIGNALS==
+        * HUP
+        * INT
+        * QUIT
+        * ABRT
+        * KILL
+        * ALRM
+        * TERM
+      </description>
+    </command>
+
+    <command name="pkill"> 
+      <usage>
+        pkill [options] pattern
+      </usage>
+      <options>
+        <option name="-u"> 
+        Output only lines that are not repeated
+        </option>
+      </options>
+      <description>
+      </description>
+    </command>
+
     <command name="pgrep"> </command>
     <command name="top"> </command>
     <command name="ps"> </command>
